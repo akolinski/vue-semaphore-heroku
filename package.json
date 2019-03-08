@@ -10,6 +10,7 @@
     "heroku-postbuild": "echo Skip build on Heroku"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1"
   },
