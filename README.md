@@ -3,7 +3,7 @@
 [![Build Status](https://semaphoreci.com/api/v1/akolinski/vue-semaphore-heroku/branches/master/badge.svg)](https://semaphoreci.com/akolinski/vue-semaphore-heroku)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A guideline on how to create a Vue.js project with Semaphore and Heroku.
+We use Semaphore as our CI tool with Heroku as our deployment server.
  
 ## Set up in terminal
 
@@ -42,10 +42,6 @@ yarn run lint
 ##### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Continuous integration
- 
-We use Semaphore as our CI tool with Heroku as our deployment server.
-
 ## How to create this project
 
 ### 1. Generate a Vue.js project
@@ -60,7 +56,7 @@ vue create name_of_project
 yarn serve
 ``` 
 
-When running the ```vue create``` command you will have to select you presets. Pick what you want. I set my preset up with Babel router, CSS Pre-processors, Linter / Formatter and Unit testing. Select Sass/SCSS with node-sass. Select ESLint with error prevention only. Select Lint and fix on commit. Select Mocha + Chai.
+When running the ```vue create``` command you will have to select you presets. I set my presets up with Babel router, CSS Pre-processors, Linter / Formatter and Unit testing. Select Sass/SCSS with node-sass. Select ESLint with error prevention only. Select Lint and fix on commit. Select Mocha + Chai.
 
 ```
 cd <name_of_project>
@@ -77,13 +73,13 @@ First of all you need to install Heroku.
 brew install heroku/brew/heroku
 ```
 
-When installation completes, you can use the ```heroku``` command from your terminal.
+When installed you can use the ```heroku``` command from your terminal.
 
 ```
 heroku login
 ```
 
-You need to have node, npm and git installed on your machine to move forward.
+You need to have node, npm and git installed on your machine to proceed.
 
 ```
 node --version
@@ -91,7 +87,7 @@ npm --version
 git --version
 ```
 
-Seeing as we are creating a vue js project using yarn with heroku we use the <a target="_blank" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting started on Heroku with Node.js documentation as a guide</a>.
+We are creating a vue js project using yarn with Heroku. I used the <a target="_blank" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting started on Heroku with Node.js</a> documentation as a guide.
 
 ```
 heroku create <name_of_project>
@@ -103,14 +99,13 @@ There might be some prompts regarding the command below follow the instructions 
 
 ```npx @heroku/update-node-build-script```
 
-Your app should show at the heroku URL specified in terminal but it will not work just yet. As a handy shortcut, you can open the website as follows ```heroku open```
-
-We need to keep our generated dist directory. We can always keep a pristine copy of what we have deployed to Heroku by commenting the dist/ folder from .gitignore
+Your app should show at the Heroku URL specified in terminal but it will not work just yet. As a handy shortcut, you can open the website as follows ```heroku open```. We need to keep our generated dist directory. We can always keep a pristine copy of what we have deployed to Heroku by commenting the dist/ folder from .gitignore.
 
 ```
 # dist/ --- COMMENT THIS LINE OUT
 ```
-<p>We now need to create a ```server.js``` file a build our site. Since Vue is only a frontend library, the easiest way to host it and do things like serve up assets is to create a simple Express friendly script that Heroku can use to start a mini-web server. Read up quickly on <a href="https://expressjs.com/" target="_blank">Express</a> if you haven’t already. After that, add express:</p>
+
+We now need to create a ```server.js``` file to build our site. Since Vue is only a frontend library, the easiest way to host it and do things like serve up assets is to create a simple Express friendly script that Heroku can use to start a mini-web server. Read up quickly on <a href="https://expressjs.com/" target="_blank">Express</a> if you haven’t already. After that, add express:</p>
 
 ```
 yarn add express --save
@@ -136,17 +131,13 @@ IMPORTANT: What you probably noticed is that this will serve up a dist directory
 yarn run build
 ```
 
-You should see an output dist directory now.
-
-Let’s test our server.js file by running it:
+You should see an output dist directory now. Let’s test our server.js file by running it:
 
 ```
 node server.js
 ```
 
-Now go to <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> and make sure your app loads. This is the actual site Heroku will serve up.
-
-Lastly, we’ll have to edit our start script in package.json to start our node server, as Heroku will automatically look for this script when looking for how to run a node.js app.
+Now go to <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> and make sure your app loads. This is the actual site Heroku will serve up. Lastly, we’ll have to edit our start script in package.json to start our node server, as Heroku will automatically look for this script when looking for how to run a node.js app.
 
 ```
 // package.json
@@ -163,7 +154,7 @@ Lastly, we’ll have to edit our start script in package.json to start our node 
 ...
 ```
 
-Let's add, commit and deploy our changes to see if it works now.
+Let's add, commit and deploy our changes to see if it works.
 
 ```
 git add .
@@ -176,7 +167,7 @@ You should now see what you had locally in production.
 
 ### 3. Version control
 
-Let's version control this in our own Github repository. Create a repository in Github with your <name_of_project>. Then we need to push all our code to that repository:
+We need to version control this in our own Github repository. Create a repository in Github with your <name_of_project>. Then we need to push all our code to that repository.
 
 ```
 git init
@@ -195,13 +186,11 @@ git checkout stable
 git push origin stable
 ```
 
-IMPORTANT: We will use the ```stable``` branch as a staging branch and the ```master``` branch will be used as the production branch. You should always branch out from the ```stable``` branch to build you features and then create a pull request to merge the branch to stable. Once the branch has been tested, reviewed and merged it can manually be merged to master and automatically deployed to production.
+IMPORTANT: We will use the ```stable``` branch as a staging branch and the ```master``` branch will be used as the production branch. You should always branch out from the ```stable``` branch to build your features and then create a pull request to merge to the stable branch. Once the PR has been tested, reviewed and approved it can manually be merged to ```master```. It will then trigger an automatic deploy to production.
 
 ### 4. Semaphore CI
 
-Semaphore is a hosted continuous integration and delivery service for private and open source projects. First of all you need to add a new project and select your repository from Github. Select the master branch and choose who will own the project. As we have built a vue js app with a ```package.json``` file select JavaScript as the language, node.js 10^ and remove 'Job #1' and only have Setup with the 'npm install' command present, press 'Build With These Settings'. The project will now build and it should pass. Once passed go to the dashboard for the project and press "Set Up Deployment".
-
-Select Heroku, Automatic for the master branch. Now you will have to login to Heroku and grab your API key from your account settings. Once pasted click "Next Step". Select your Heroku application, the one we just built above and give it a nice server name and paste the production URL that we have from Heroku. When you get to the next screen just click "Deploy". Once complete you have now set up Semaphore!
+Semaphore is a hosted continuous integration and delivery service for private and open source projects. First of all you need to add a new project and select your repository from Github. Select the ```master``` branch and choose who will own the project. As we have built a Vue.js app with a ```package.json``` file select JavaScript as the language, a recent version of node.js and remove 'Job #1' and only have Setup with the ```npm install``` command present, press 'Build With These Settings'. The project will now build and it should pass. Once passed go to the dashboard for the project and press "Set Up Deployment". Select Heroku and then Automatic and select the ```master``` branch. You will have to login to Heroku and grab your API key from your account settings. Once pasted click "Next Step". Select your Heroku application, the one we just built above and give it a nice server name and paste the production URL that we have from Heroku. When you get to the next screen just click "Deploy". Once the deploy is complete you have finished setting up Semaphore. If you like go to Project settings and click on Badges on the left hand side. Copy the Markdown line and paste it to the top of your README.md file for added documentation sugar. You can also click on Notifications and select to receive notifications via email after deploys.
 
 ### 5. Heroku deploy settings
 
@@ -209,7 +198,7 @@ Go to the Heroku dashboard and click on your app. Then select the Deploy tab and
 
 ### 6. Heroku pipelines
 
-Go to the Heroku dashboard and click on your app.  Then select the Deploy tab and go to "Add this app to a pipeline" and choose to "Create new pipeline", name it and select "production" as the stage, press "Create pipeline". Connect the pipeline to the Github repository in the pipelines settings. Now click on Pipeline and press "Enable Review Apps". Follow the prompts to create the app.json file and commit it to the repository. Check the "Create new review apps for new pull requests automatically" box and "Destroy stale review apps". Your pipeline is now set up but we need to make sure our stable branch is ready with our recently commited app.json file:
+Go to the Heroku dashboard and click on your app.  Then select the Deploy tab and go to "Add this app to a pipeline" and choose to "Create new pipeline". Name the pipeline, select "production" as the stage and press "Create pipeline". Connect the pipeline to the Github repository in the pipelines settings. Now click on Pipeline and press "Enable Review Apps". Follow the prompts to create the app.json file and commit it to the repository. Check the "Create new review apps for new pull requests automatically" checkbox and "Destroy stale review apps" checkbox. Your pipeline is now set up but we need to make sure our stable branch is ready with our recently committed app.json file.
 
 ```
 git checkout master
@@ -224,7 +213,7 @@ Make a change and create a pull request from stable to master and watch the magi
 
 #### Trouble shooting
 
-```Your account has reached its concurrent builds limit```
+```*Your account has reached its concurrent builds limit```
 
 You need to add a credit card to your heroku account settings in order for your account to be verified or you will receive build failures in Semaphore. The app will still deploy but in order to fix this bug this is what you need to do. As long as you are not using any additional services you will not be charged for any services. 
 
