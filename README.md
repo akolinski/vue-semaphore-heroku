@@ -3,8 +3,7 @@
 [![Build Status](https://semaphoreci.com/api/v1/akolinski/vue-semaphore-heroku/branches/master/badge.svg)](https://semaphoreci.com/akolinski/vue-semaphore-heroku)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-You first set this project up as a local vue project. Then followed this guide.
-We set this project up with heroku and created a pipeline so that pull requests create
+A guideline on how to create a Vue.js project with Semaphore and Heroku.
  
 ## Set up in terminal
 
