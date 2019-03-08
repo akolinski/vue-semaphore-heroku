@@ -209,7 +209,7 @@ git merge master
 git push origin stable
 ```
 
-Make a change and create a pull request from stable to master and watch the magic happen. First it will create a review app and once merged into master it will automatically deploy to production.
+Make a change, run ```yarn build``` locally and then create a pull request from stable to master and watch the magic happen. First it will create a review app and once merged into master it will automatically deploy to production.
 
 #### Trouble shooting
 
