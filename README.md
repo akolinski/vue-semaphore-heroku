@@ -9,11 +9,11 @@ We set this project up with heroku and created a pipeline so that pull requests 
 ## Set up in terminal
 
 ```
-git clone git@github.com:makeaweb/example-ci.git
+git clone <name_of_project_github_url>
 ``` 
 
 ```
-cd example-ci
+cd <name_of_project>
 ``` 
 
 ```
