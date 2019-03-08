@@ -215,6 +215,6 @@ Make a change and create a pull request from stable to master and watch the magi
 
 ```*Your account has reached its concurrent builds limit```
 
-You need to add a credit card to your heroku account settings in order for your account to be verified or you will receive build failures in Semaphore. The app will still deploy but in order to fix this bug this is what you need to do. As long as you are not using any additional services you will not be charged for any services. 
+You need to add a credit card to your heroku account settings in order for your account to be verified or you will receive build failures in Semaphore. The app will still deploy but in order to fix this bug this is what you need to do. As long as you are not using any additional services you will not be charged.
 
 <a href="https://devcenter.heroku.com/articles/account-verification" target="_blank">https://devcenter.heroku.com/articles/account-verification</a>
