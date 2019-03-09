@@ -211,7 +211,13 @@ git push origin stable
 
 Make a change, run ```yarn build``` locally and then create a pull request from stable to master and watch the magic happen. First it will create a review app and once merged into master it will automatically deploy to production.
 
-#### Trouble shooting
+#### Github marketplace
+
+There are additional tools that we integrate into our workflow that'll help with streamlining the review process.
+
+- <a href="https://github.com/marketplace/accesslint" target="_blank">AccessLint</a>
+
+#### Troubleshooting
 
 ```*Your account has reached its concurrent builds limit```
 
