@@ -124,19 +124,21 @@ app.listen(port);
 // console.log('http://localhost:5000 server started.');
 ```
 
-IMPORTANT: What you probably noticed is that this will serve up a dist directory. dist is a predefined directory that Vue.js builds which is a compressed, minified version of your site. We’ll build this and then tell Heroku to run server.js so Heroku hosts up this dist directory:
+Now please run
 
 ```
 yarn run build
 ```
 
-You should see an output dist directory now. Let’s test our server.js file by running it:
+This will serve up a dist directory. The dist directory is the predefined directory that Vue.js builds which is a compressed, minified version of your site. We’ll build this and then tell Heroku to run server.js. Heroku hosts up this dist directory.
+
+Let’s test our server.js file by running it:
 
 ```
 node server.js
 ```
 
-Now go to <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> and make sure your app loads. This is the actual site Heroku will serve up. Lastly, we’ll have to edit our start script in package.json to start our node server, as Heroku will automatically look for this script when looking for how to run a node.js app.
+Now go to <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> and make sure your app loads. This is the actual site Heroku will serve up. Lastly, we’ll have to edit our start script in package.json to start our node server. Heroku will automatically look for this script when looking for how to run a node.js app.
 
 ```
 // package.json
