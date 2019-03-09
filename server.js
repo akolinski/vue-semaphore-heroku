@@ -5,4 +5,5 @@ var app = express();
 app.use(serveStatic(__dirname + "/dist"));
 var port = process.env.PORT || 5000;
 app.listen(port);
-console.log('server started '+ port);
+/*eslint no-console: "error"*/
+Console.log('server started '+ port);
