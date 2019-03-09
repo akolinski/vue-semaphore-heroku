@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Vue.js, semaphore and heroku integration"/>
   </div>
 </template>
