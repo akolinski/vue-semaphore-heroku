@@ -1,7 +1,7 @@
 # vue-semaphore-heroku
 
 [![Build Status](https://semaphoreci.com/api/v1/akolinski/vue-semaphore-heroku/branches/master/badge.svg)](https://semaphoreci.com/akolinski/vue-semaphore-heroku)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/akolinski/vue-semaphore-heroku.svg)](https://greenkeeper.io/)
 
 We use Semaphore as our CI tool with Heroku as our deployment server.
  
