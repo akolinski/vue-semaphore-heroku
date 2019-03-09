@@ -1,7 +1,8 @@
 # vue-semaphore-heroku
 
 [![Build Status](https://semaphoreci.com/api/v1/akolinski/vue-semaphore-heroku/branches/master/badge.svg)](https://semaphoreci.com/akolinski/vue-semaphore-heroku)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/akolinski/vue-semaphore-heroku.svg)](https://greenkeeper.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akolinski/vue-semaphore-heroku.svg)](https://greenkeeper.io/)
 
 We use Semaphore as our CI tool with Heroku as our deployment server.
  
@@ -216,6 +217,9 @@ Make a change, run ```yarn build``` locally and then create a pull request from 
 There are additional tools that we integrate into our workflow that will help with streamlining the review process.
 
 - <a href="https://github.com/marketplace/accesslint" target="_blank">AccessLint</a>
+- <a href="https://github.com/marketplace/wip" target="_blank">WIP</a>
+- <a href="https://github.com/marketplace/codefactor" target="_blank">CodeFactor</a>
+- <a href="https://github.com/marketplace/greenkeeper" target="_blank">Greenkeeper</a>
 
 #### Troubleshooting
 
