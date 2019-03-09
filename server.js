@@ -6,4 +6,4 @@ app.use(serveStatic(__dirname + "/dist"));
 var port = process.env.PORT || 5000;
 app.listen(port);
 /*eslint no-console: "error"*/
-Console.log('server started '+ port);
+console.log('http://localhost:5000 server started.');
