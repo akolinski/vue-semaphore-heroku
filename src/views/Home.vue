@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img src="../assets/logo.png">
     <HelloWorld msg="Vue.js, semaphore and heroku integration"/>
   </div>
 </template>
@@ -8,6 +8,8 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+
+console.log("Hello world");
 
 export default {
   name: 'home',
