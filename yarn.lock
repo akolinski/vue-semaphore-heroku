@@ -984,12 +984,12 @@
     babel-loader "^8.0.6"
     webpack "^4.0.0"
 
-"@vue/cli-plugin-eslint@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-4.0.2.tgz#f0503098dc7ce6389f187ca1b04b0646ce358768"
-  integrity sha512-dxrexOPCkR6fmRSejNAYy5N3jmNBzzZCJ9omSSXUCmUDvwsOErkavXQXj/xZa0Dpy0UMRv1wcTfAiczvi6my1Q==
+"@vue/cli-plugin-eslint@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-4.0.5.tgz#f23f46478b5e7a40ba55f6ba1bb11dbec49c45ba"
+  integrity sha512-hiPU2+knz3GgSUDniekbp81Iciax9yIFzz1swy1QTJGABXT/3gqakz7Gc0IGgpo+wRkMHk9DyCK8+TpI6wdtWg==
   dependencies:
-    "@vue/cli-shared-utils" "^4.0.2"
+    "@vue/cli-shared-utils" "^4.0.5"
     eslint-loader "^2.1.2"
     globby "^9.2.0"
     webpack "^4.0.0"
@@ -1103,10 +1103,10 @@
     semver "^6.1.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.2.tgz#cc5fec8ff248e163e14157ecc7b936b19365158f"
-  integrity sha512-zSIR4VoFEmFLOtVo4TeyCEN1mj1AoVlMAP5feNvEJHiSTjI5i/gMQYp01ELu8xFwAjZ17ZxetpztnYoLsGak5w==
+"@vue/cli-shared-utils@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.4.tgz#ef94325c3954eaac60ca4af9a6de355131ae6e3f"
+  integrity sha512-f8a9MxZJ89zw783gk2yjG6wPu5IHnmrH8whc1jMJhWNKxRTgCkUxevPVQIobiWy1UtMBdDXXOLxd4PRNK9nyxQ==
   dependencies:
     "@hapi/joi" "^15.0.1"
     chalk "^2.4.1"
@@ -1121,10 +1121,10 @@
     semver "^6.1.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.4.tgz#ef94325c3954eaac60ca4af9a6de355131ae6e3f"
-  integrity sha512-f8a9MxZJ89zw783gk2yjG6wPu5IHnmrH8whc1jMJhWNKxRTgCkUxevPVQIobiWy1UtMBdDXXOLxd4PRNK9nyxQ==
+"@vue/cli-shared-utils@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.5.tgz#dd263fa3b3a75c11cdc64376d4c45470fba6b270"
+  integrity sha512-NlNZ4Dx5QcP5uO5fCOLgkN2tbhNan5EcptPvXawW/md18cIpMlKbph6L6lEfJj8vrSvTUf2i/FyoFSh1rV53hw==
   dependencies:
     "@hapi/joi" "^15.0.1"
     chalk "^2.4.1"
